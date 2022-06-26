@@ -2,7 +2,7 @@
 <html>
 <head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
 <meta charset="utf-8">
-<title>クラッカーを鳴らすアニメーションを表示する</title>
+<title>投げモナするとクラッカーを鳴らすアニメーションを表示する</title>
 <meta name="description" content="英語ではPartyPopperと呼ぶ。">
 <meta name="author" content="ytyaru">
 <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">
@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:type" content="profile" />
 <meta property="og:site_name" content="ytyaru" />
-<meta property="og:title" content="クラッカーを鳴らすアニメーションを表示する" />
+<meta property="og:title" content="投げモナするとクラッカーを鳴らすアニメーションを表示する" />
 <meta property="og:description" content="英語ではPartyPopperと呼ぶ。" />
 <meta property="og:image" content="https://ytyaru.github.io/Html.Mona.Transaction.Get.20220618094040/asset/image/eye-catch.png" />
 <meta property="article:modified_time" content="2022-06-23T16:05:00+09:00" />
@@ -45,7 +45,7 @@
     },
     "dateModified": "2022-06-23T16:05:00+09:00",
     "datePublished": "2022-06-23T16:00:00+09:00",
-    "headline": "クラッカーを鳴らすアニメーションを表示する",
+    "headline": "投げモナするとクラッカーを鳴らすアニメーションを表示する",
     "image": ["https://ytyaru.github.io/Html.Mona.Transaction.Get.20220618094040/asset/image/eye-catch.png"]
   }
 </script>
@@ -113,11 +113,18 @@
 <script src="js/main.js"></script>
 </head>
 <body>
-<h1>クラッカーを鳴らすアニメーションを表示する</h1>
+<h1>投げモナするとクラッカーを鳴らすアニメーションを表示する</h1>
 <p>英語ではPartyPopperと呼ぶ。</p>
 <button id="party-confetti-simple" type="button">クラッカーを鳴らす（デフォルト）</button>
 <button id="party-confetti-custom" type="button">クラッカーを鳴らす（カスタム）</button>
 <p>投げモナボタンで送金したあとにクラッカーを鳴らすようにした。</p>
+<mpurse-send-button to="MEHCqJbgiNERCH3bRAtNSSD9uxPViEX1nu" img="coin-monar"></mpurse-send-button>
+
+<h2>投げモナボタンのバグ修正</h2>
+<p>クリックしてもMpurseが起動しないことがあった。原因は<code>click</code>と<code>pointerdown</code>の２種類のイベントを使っていたからだと思われる。<code>pointerdown</code>に統一したら解決したっぽい。30回クリックして全部Mpurseが起動したのを確認した。</p>
+
+<h2>使用ライブラリ</h2>
+<a href="https://party.js.org/">party.js</a>
 
 <!--
 <svg width="240" height="240">

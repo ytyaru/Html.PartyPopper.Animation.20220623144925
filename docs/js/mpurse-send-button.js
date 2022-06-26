@@ -29,7 +29,7 @@ class MpurseSendButton extends HTMLElement {
         console.debug(button.innerHTML)
         shadow.innerHTML = `<style>${this.#cssBase()}${this.#cssAnimation()}</style>${button.innerHTML}` 
         // pointer系 = mouse系 + touch系 + pen系
-        this.shadowRoot.querySelector('img').addEventListener('pointerdown', (e)=>{ e.target.classList.add('jump'); }, false);
+        //this.shadowRoot.querySelector('img').addEventListener('pointerdown', (e)=>{ e.target.classList.add('jump'); }, false);
         //this.shadowRoot.querySelector('img').addEventListener('pointerover', (e)=>{ e.target.classList.add('flip'); }, false);
         //this.shadowRoot.querySelector('img').addEventListener('mouseover', (e)=>{ e.target.classList.add('flip'); }, false);
         this.shadowRoot.querySelector('img').addEventListener('animationend', (e)=>{ e.target.classList.remove('jump'); e.target.classList.remove('flip'); }, false);
@@ -102,10 +102,13 @@ class MpurseSendButton extends HTMLElement {
         const amount = Number(this.amount) || 0.11411400
         const memoType = (this.memo) ? 'plain' : 'no' // 'no', 'hex', 'plain'
         const memo = this.memo
-        this.addEventListener('click', async(event) => {
+        this.addEventListener('pointerdown', async(event) => {
             console.debug(`クリックしました。\n宛先：${to}\n金額：${amount} ${asset}\nメモ：${memo}`)
-            const txHash = await window.mpurse.sendAsset(to, asset, amount, memoType, memo).catch((e) => this.ngMsg);
-            if (!txHash || txHash === this.ngMsg) { Toaster.toast(this.ngMsg, true); }
+            console.debug(event.target)
+            event.target.shadowRoot.querySelector('img').classList.add('jump')
+            const txHash = await window.mpurse.sendAsset(to, asset, amount, memoType, memo).catch((e) => null);
+            console.debug(txHash)
+            if (!txHash) { Toaster.toast(this.ngMsg); }
             else {
                 console.debug(txHash)
                 console.debug(`送金しました。\ntxHash: ${txHash}\n宛先：${to}\n金額：${amount} ${asset}\nメモ：${memo}`)
@@ -124,7 +127,7 @@ class MpurseSendButton extends HTMLElement {
     #makeSendButtonA() {
         const a = document.createElement('a')
         a.setAttribute('title', this.title)
-        a.setAttribute('class', `vov swivel-horizontal-double`) // アニメーション用
+        //a.setAttribute('class', `vov swivel-horizontal-double`) // アニメーション用
         return a
     }
     #makeSendButtonImg() {
