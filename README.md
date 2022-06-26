@@ -1,12 +1,12 @@
 [ja](./README.ja.md)
 
-# PartyPopper.Animation
+# PartyPopper.Animation.Mpurse.Send.Button
 
 Animation that sounds a cracker.
 
 # DEMO
 
-* [DEMO](https://ytyaru.github.io/Html.PartyPopper.Animation.20220623144925/)
+* [DEMO](https://ytyaru.github.io/Html.PartyPopper.Animation.Mpurse.Send.Button.20220623144925/)
 
 # Features
 
@@ -27,13 +27,13 @@ Linux raspberrypi 5.10.103-v7l+ #1529 SMP Tue Mar 8 12:24:00 GMT 2022 armv7l GNU
 # Installation
 
 ```sh
-git clone https://github.com/ytyaru/Html.PartyPopper.Animation.20220623144925
+git clone https://github.com/ytyaru/Html.PartyPopper.Animation.Mpurse.Send.Button.20220623144925
 ```
 
 # Usage
 
 ```sh
-cd Html.PartyPopper.Animation.20220623144925/src
+cd Html.PartyPopper.Animation.Mpurse.Send.Button.20220623144925/src
 ./run.sh
 ```
 

@@ -1,12 +1,12 @@
 [en](./README.md)
 
-# PartyPopper.Animation
+# PartyPopper.Animation.Mpurse.Send.Button
 
 　クラッカーを鳴らすアニメーション。
 
 # デモ
 
-* [デモ](https://ytyaru.github.io/Html.PartyPopper.Animation.20220623144925/)
+* [デモ](https://ytyaru.github.io/Html.PartyPopper.Animation.Mpurse.Send.Button.20220623144925/)
 
 # 特徴
 
@@ -27,13 +27,13 @@ Linux raspberrypi 5.10.103-v7l+ #1529 SMP Tue Mar 8 12:24:00 GMT 2022 armv7l GNU
 # インストール
 
 ```sh
-git clone https://github.com/ytyaru/Html.PartyPopper.Animation.20220623144925
+git clone https://github.com/ytyaru/Html.PartyPopper.Animation.Mpurse.Send.Button.20220623144925
 ```
 
 # 使い方
 
 ```sh
-cd Html.PartyPopper.Animation.20220623144925/src
+cd Html.PartyPopper.Animation.Mpurse.Send.Button.20220623144925/src
 ./run.sh
 ```
 
